@@ -28,11 +28,15 @@ class Player(GameSprite):
         keys = key.get_pressed()
         if keys[K_UP] and self.rect.y > 5:
             self.rect.y -= self.speed
+         if keys[K_DOWN] and self.rect.y < 495:   
+             self.rect.y += self.speed
             
     def update_r(self):
         keys = key.get_pressed()
         if keys[K_w] and self.rect.y > 5:
             self.rect.y -= self.speed
+        if keys[K_s] and self.rect.y < 495:   
+             self.rect.y += self.speed 
        
 font.init()
 font1 = font.SysFont('Arial', 40)
